@@ -22,12 +22,8 @@ class TodoList extends React.Component {
   constructor(props) {
     super(props);
     this.state = { list: [], value: "", counter: -1 };
-    this.addText = this.addText.bind(this);
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleSwitch = this.handleSwitch.bind(this);
   }
-  addText(event) {
+  addText = (event) =>  {
     this.setState({ counter: ++this.state.counter });
     const item = {
       id: this.state.counter,
@@ -36,13 +32,13 @@ class TodoList extends React.Component {
     };
     this.setState({ list: this.state.list.concat(item) });
   }
-  handleChange(event) {
+  handleChange = (event) => {
     this.setState({ value: event.target.value });
   }
-  handleSubmit(event) {
+  handleSubmit = (event) => {
     event.preventDefault();
   }
-  handleSwitch(event) {
+  handleSwitch = (event) => {
     let list_copy = this.state.list;
     list_copy[event.target.id].completed = !list_copy[event.target.id]
       .completed;
