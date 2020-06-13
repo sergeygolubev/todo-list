@@ -55,7 +55,7 @@ class TodoList extends React.Component {
             value={this.state.value}
             onChange={this.handleChange}
           />
-          <div className="input-group-append">
+          <div data-testid="button-new" className="input-group-append">
             <AddButton handler={this.addText} />
           </div>
         </div>
