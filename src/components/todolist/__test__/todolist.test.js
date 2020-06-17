@@ -17,3 +17,11 @@ it('click on a button and create a new list item', () => {
   fireEvent.click(getByTestId('button-new'))
   expect(screen.getByText('test item')).toBeTruthy()
 });
+
+it('list item click and strikethrough is working', () => {
+  const { getByTestId } = render(<TodoList />);
+  fireEvent.change(getByTestId('input-text-box'), { target: { value: 'test item 2' } })
+  fireEvent.click(getByTestId('button-new'))
+  fireEvent.click(screen.getByText('test item 2'))
+  expect(screen.getByTestId('strikethrough')).toBeTruthy()
+});

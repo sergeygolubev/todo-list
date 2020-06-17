@@ -45,7 +45,7 @@ class TodoList extends React.Component {
 function ListItem(props) {
   if (props.completed) {
     return (
-      <s>
+      <s data-testid="strikethrough">
         <li onClick={props.handler} id={props.id} data-testid="list-item">
           {props.value}
         </li>
