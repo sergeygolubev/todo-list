@@ -5,6 +5,6 @@ import InputText from '.././input';
 
 it('input renders without crashing', () => {
   const { getByTestId } = render(<InputText />);
-  const button = getByTestId('input-text-box');
-  expect(button).toBeInTheDocument()
+  const input = getByTestId('input-text-box');
+  expect(input).toBeInTheDocument()
 });
