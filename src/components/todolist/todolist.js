@@ -24,10 +24,10 @@ class TodoList extends React.Component {
     event.preventDefault();
   };
   handleSwitch = (event) => {
-    let list_copy = this.state.list;
-    list_copy[event.target.id].completed = !list_copy[event.target.id]
+    let listCopy = this.state.list;
+    listCopy[event.target.id].completed = !listCopy[event.target.id]
       .completed;
-    this.setState({ list: list_copy });
+    this.setState({ list: listCopy });
   };
   render() {
     return (
