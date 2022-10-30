@@ -1,3 +1,5 @@
+Есть новая версия с последней версией React.js 18.2.0 - https://github.com/sergeygolubev/todo-list-hooks
+
 To start project, you can run:
 
 npm start
